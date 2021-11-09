@@ -20,10 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .container {
-  margin-right: 10rem;
-  margin-left: 10rem;
-
   overflow: hidden;
+  margin: 0 2rem 0 2rem;
 }
 
 a {
@@ -42,6 +40,7 @@ a {
 
   position: absolute;
 }
+
 #header span {
   color: var(--green-light);
 }
@@ -55,39 +54,53 @@ a {
 /* ======================================= */
 
 .balance {
-  display: grid;
-  grid-auto-flow: column;
+  position: relative;
+  margin-top: 8.45rem;
+
+  display: flex;
+  flex-flow: column;
 
   gap: 2rem;
-
-  position: relative;
-
-  margin-top: 8.45rem;
 }
 
 .balance .cards {
-  width: auto;
-  height: 8.5rem;
+  width: 100%;
+  height: auto;
 
-  padding: 2rem 0rem 0rem 2rem;
+  padding: 2rem;
 
   border-radius: 0.3125rem;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+
+  border: 0.03125rem solid rgba(0, 0, 0, 0.1);
+
+  /*
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  */
 }
 
 .balance .sub-title {
-  font: 100 1rem "Poppins", sans-serif;
+  font: 400 1rem "Poppins", sans-serif;
   color: var(--blue-titles);
   height: fit-content;
 }
 
 .balance .sub-value {
-  font: 400 2rem "Poppins", sans-serif;
+  font: 700 2rem "Poppins", sans-serif;
   color: var(--blue-titles);
 }
 
 .balance .entradas {
   background: var(--white-background);
+}
+
+.balance .entradas .sub-value {
+  color: var(--green-light);
+}
+
+.balance .saidas .sub-value {
+  color: var(--red-light);
 }
 
 .balance .saidas {
@@ -103,18 +116,45 @@ a {
   color: var(--cor-principal);
 }
 
+.balance section img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.balance section p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* ======================================= */
 
-button {
+button#lancamento {
   margin-top: 2rem;
   border: 0;
 
-  font: 100 1rem "Poppins", sans-serif;
+  font: 400 1rem "Poppins", sans-serif;
 
   color: var(--green-light);
+
+  background-color: var(--white-background);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+
+  opacity: 0.6;
 }
 
-#transacao {
+button#lancamento:hover {
+  opacity: 1;
+}
+
+button#lancamento img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #data-table {
@@ -125,9 +165,9 @@ button {
 table td {
   background: var(--cor-principal);
 
-  font: 400 1rem "Poppins", sans-serif;
+  font: 400 0.875rem "Poppins", sans-serif;
 
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 table tr {
@@ -135,9 +175,9 @@ table tr {
 }
 
 .transacoes .table-title {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-align: left;
-  font: 100 1rem "Poppins", sans-serif;
+  font: 400 1rem "Poppins", sans-serif;
   color: var(--blue-texts);
 }
 
@@ -149,9 +189,29 @@ table tr {
   color: var(--blue-texts);
 }
 
+.transacoes .remover .btn-remover {
+  border: 0;
+
+  background-color: var(--cor-principal);
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.transacoes .remover {
+  text-align: center;
+}
+
+.transacoes .remover img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .transacoes tbody tr {
   opacity: 0.7;
-  transition: 1s;
 }
 
 .transacoes tbody tr:hover {
@@ -168,14 +228,125 @@ table tbody tr td:last-child {
 
 /* ======================================= */
 
-#footer {
+.tela-lancamento {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
   position: fixed;
-  height: 5rem;
-  background: var(--green-dark);
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tela {
+  background: var(--white-background);
+  padding: 3rem;
+
+  border-radius: 0.3125rem;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tela-lancamento h2 {
+  font: 400 1.5rem "Poppins", sans-serif;
+  color: var(--blue-titles);
+
+  margin-bottom: 1rem;
+}
+
+#form {
+  max-width: 600px;
+}
+
+#form form input {
+  border: none;
+  border-radius: 0.3125rem;
+
+  padding: 1rem;
+
+  width: 100%;
+}
+
+.input-group {
+  margin-top: 0.5rem;
+}
+
+#form form small {
+  opacity: 0.5;
+  font: 400 0.6rem "Poppins", sans-serif;
+}
+
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+  width: 48%;
+  height: 50px;
+}
+
+.input-group.actions .button {
+  border: 2px solid var(--red-light);
+  border-radius: 0.3125rem;
+
+  color: var(--red-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.6;
+}
+
+.input-group.actions .button:hover {
+  opacity: 1;
+}
+
+.input-group.actions button {
+  border: 2px solid var(--green-light);
+  border-radius: 0.3125rem;
+
+  background: var(--green-light);
+  color: var(--cor-principal);
+
+  cursor: pointer;
+
+  opacity: 0.7;
+}
+
+.input-group.actions button:hover {
+  opacity: 1;
+}
+
+.input-group input#description,
+.input-group input#amount,
+.input-group input#date,
+.input-group.actions .button,
+.input-group.actions button {
+  font: 400 0.875rem "Poppins", sans-serif;
+}
+/* ======================================= */
+
+#footer {
+  height: 4rem;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
+  margin-top: 2rem;
 
   display: flex;
   justify-content: center;
@@ -184,6 +355,54 @@ table tbody tr td:last-child {
 }
 
 #footer p {
-  font: 100 0.875rem "Poppins", sans-serif;
-  color: var(--cor-principal);
+  font: 400 0.875rem "Poppins", sans-serif;
+  color: var(--blue-texts);
+
+  opacity: 0.7;
+}
+
+#footer a {
+  font: 400 0.875rem "Poppins", sans-serif;
+  color: var(--blue-texts);
+}
+
+/* ================= RESPONSIVIDADE >768< ================= */
+
+@media (min-width: 768px) {
+  table td {
+    background: var(--cor-principal);
+
+    font: 400 1rem "Poppins", sans-serif;
+
+    padding: 1rem 2rem;
+  }
+
+  .transacoes .table-title {
+    padding: 1rem 2rem;
+    text-align: left;
+    font: 400 1rem "Poppins", sans-serif;
+    color: var(--blue-texts);
+  }
+
+  .transacoes .remover img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* ================= RESPONSIVIDADE >1200< ================= */
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 8rem 0 8rem;
+  }
+
+  .balance {
+    display: flex;
+    flex-flow: row;
+  }
+
+  #form form small {
+    font: 400 0.8rem "Poppins", sans-serif;
+  }
 }
