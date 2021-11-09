@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>dev.finance$</title>
+  </head>
+  <body>
+    <header class="" id="header">
+      <h1 class="title">dev<span>.</span>finance <span>$</span></h1>
+    </header>
+
+    <main class="container" id="main">
+      <div class="balance">
+        <section class="entradas cards">
+          <p class="sub-title">Entradas</p>
+          <h3 class="sub-value">R$ 17.400,00</h3>
+        </section>
+
+        <section class="saidas cards">
+          <p class="sub-title">Saídas</p>
+          <h3 class="sub-value">R$ 1.259,00</h3>
+        </section>
+
+        <section class="total cards">
+          <p class="sub-title">Total</p>
+          <h3 class="sub-value">R$ 16.141,00</h3>
+        </section>
+      </div>
+
+      <section class="transacoes">
+        <button id="lancamento">Nova Transação</button>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th class="table-title">Descrição</th>
+              <th class="table-title">Valor</th>
+              <th class="table-title">Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="descricao">Desenvolvimento de Site</td>
+              <td class="valores">R$ 12.000,00</td>
+              <td class="data">13/03/2020</td>
+            </tr>
+            <tr>
+              <td class="descricao">Hamburguer</td>
+              <td class="valores">R$ 59,00</td>
+              <td class="data">10/04/2021</td>
+            </tr>
+            <tr>
+              <td class="descricao">Aluguel de apartamento</td>
+              <td class="valores">R$ 1.200,00</td>
+              <td class="data">27/03/2020</td>
+            </tr>
+            <tr>
+              <td class="descricao">Computador</td>
+              <td class="valores">R$ 5.400,00</td>
+              <td class="data">15/03/2020</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="" id="footer">
+      <p>&copy; 2021 prisma.systems</p>
+      <p>Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
