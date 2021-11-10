@@ -26,7 +26,7 @@
             <span>Entradas</span>
             <img src="src/entradas.svg" alt="Icone referente a entradas." />
           </p>
-          <h3 class="sub-value">R$ 17.400,00</h3>
+          <h3 id="entradas" class="sub-value">R$ 17.400,00</h3>
         </section>
 
         <section class="saidas cards">
@@ -34,7 +34,7 @@
             <span>Saídas</span>
             <img src="src/saídas.svg" alt="Icone referente a saídas." />
           </p>
-          <h3 class="sub-value">R$ 1.259,00</h3>
+          <h3 id="saidas" class="sub-value">R$ 1.259,00</h3>
         </section>
 
         <section class="total cards">
@@ -42,12 +42,12 @@
             <span>Balanço</span>
             <img src="src/total.svg" alt="Icone referente a balanço." />
           </p>
-          <h3 class="sub-value">R$ 16.141,00</h3>
+          <h3 id="total" class="sub-value">R$ 16.141,00</h3>
         </section>
       </div>
 
       <section class="transacoes">
-        <button id="lancamento">
+        <button onclick="telaTransacao.open()" id="lancamento">
           <img
             src="src/add.svg"
             alt="Icone referente a adição de transações"
@@ -63,9 +63,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <!--<tr>
               <td class="descricao">Desenvolvimento de Site</td>
-              <td class="valores">R$ 12.000,00</td>
+              <td class="valores positivo">R$ 12.000,00</td>
               <td class="data">13/03/2020</td>
               <td class="remover">
                 <button title="Remover Transação" class="btn-remover">
@@ -78,7 +78,7 @@
             </tr>
             <tr>
               <td class="descricao">Hamburguer</td>
-              <td class="valores">R$ 59,00</td>
+              <td class="valores negativo">R$ -59,00</td>
               <td class="data">10/04/2021</td>
               <td class="remover">
                 <button title="Remover Transação" class="btn-remover">
@@ -91,7 +91,7 @@
             </tr>
             <tr>
               <td class="descricao">Aluguel de apartamento</td>
-              <td class="valores">R$ 1.200,00</td>
+              <td class="valores negativo">R$ -1.200,00</td>
               <td class="data">27/03/2020</td>
               <td class="remover">
                 <button title="Remover Transação" class="btn-remover">
@@ -104,7 +104,7 @@
             </tr>
             <tr>
               <td class="descricao">Computador</td>
-              <td class="valores">R$ 5.400,00</td>
+              <td class="valores negativo">R$ -5.400,00</td>
               <td class="data">15/03/2020</td>
               <td class="remover">
                 <button title="Remover Transação" class="btn-remover">
@@ -114,7 +114,7 @@
                   />
                 </button>
               </td>
-            </tr>
+            </tr>-->
           </tbody>
         </table>
       </section>
@@ -162,7 +162,9 @@
               </div>
 
               <div class="input-group actions">
-                <a href="#" class="button cancel">Cancelar</a>
+                <a onclick="telaTransacao.close()" href="" class="button cancel"
+                  >Cancelar</a
+                >
                 <button>Salvar</button>
               </div>
             </form>

@@ -87,7 +87,7 @@ a {
 }
 
 .balance .sub-value {
-  font: 700 2rem "Poppins", sans-serif;
+  font: 400 2rem "Poppins", sans-serif;
   color: var(--blue-titles);
 }
 
@@ -183,6 +183,14 @@ table tr {
 
 .transacoes .descricao {
   color: var(--blue-titles);
+}
+
+.transacoes .negativo {
+  color: var(--red-light);
+}
+
+.transacoes .positivo {
+  color: var(--green-light);
 }
 
 .transacoes .data {
