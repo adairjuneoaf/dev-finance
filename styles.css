@@ -6,6 +6,9 @@
   --red-light: #e92929;
   --green-light: #49aa26;
   --green-dark: #2d4a22;
+  --red-logo: #ed140a;
+  --span-logo: #7c3515;
+  --backgound-logo: #fff5e6;
 }
 * {
   margin: 0;
@@ -32,23 +35,35 @@ a {
 
 #header {
   overflow: hidden;
-  background: var(--green-dark);
+  background: var(--backgound-logo);
   text-align: center;
 
   width: 100%;
   height: 12rem;
 
   position: absolute;
-}
 
+  display: flex;
+  justify-content: center;
+}
+/*
 #header span {
-  color: var(--green-light);
+  color: var(--span-logo);
 }
 
 #header .title {
-  margin-top: 1.5rem;
-  font: 400 1.5rem "Poppins", sans-serif;
-  color: var(--cor-principal);
+  margin-top: 3rem;
+
+  font: 400 2rem "Pacifico", sans-serif;
+  color: var(--red-logo);
+  text-shadow: -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff,
+    -1px -1px 0 #ffffff;
+}
+*/
+
+#header img {
+  margin-top: 0.5rem;
+  height: 8rem;
 }
 
 /* ======================================= */
@@ -170,14 +185,11 @@ table td {
   padding: 1rem 1rem;
 }
 
-table tr {
-  border-radius: 0.6rem;
-}
-
 .transacoes .table-title {
   padding: 1rem 1rem;
+  font: 400 0.875rem "Poppins", sans-serif;
+  background: var(--cor-principal);
   text-align: left;
-  font: 400 1rem "Poppins", sans-serif;
   color: var(--blue-texts);
 }
 
@@ -231,6 +243,14 @@ table tbody tr td:first-child {
 }
 
 table tbody tr td:last-child {
+  border-radius: 0 0.3125rem 0.3125rem 0;
+}
+
+table thead tr th:first-child {
+  border-radius: 0.3125rem 0 0 0.3125rem;
+}
+
+table thead tr th:last-child {
   border-radius: 0 0.3125rem 0.3125rem 0;
 }
 
@@ -387,6 +407,7 @@ table tbody tr td:last-child {
 
   .transacoes .table-title {
     padding: 1rem 2rem;
+    font: 400 1rem "Poppins", sans-serif;
     text-align: left;
     font: 400 1rem "Poppins", sans-serif;
     color: var(--blue-texts);

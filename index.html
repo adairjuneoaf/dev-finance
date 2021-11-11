@@ -5,18 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="shortcut icon"
+      href="src/logo-top-burguer.svg"
+      type="image/x-icon"
+      sizes="64x64"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@100;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Pacifico&family=Poppins:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
-    <title>dev.finance$</title>
+    <title>Top Burguer | Finanças</title>
   </head>
   <body>
     <header class="" id="header">
-      <h1 class="title">dev<span>.</span>finance<span>$</span></h1>
+      <!--<h1 class="title">Top Burguer<span>.</span>Finança<span>$</span></h1>-->
+      <img
+        src="src/logo-top-burguer.png"
+        alt="Logo da lanchonete Top Burguer"
+      />
     </header>
 
     <main class="container" id="main">
@@ -26,7 +38,7 @@
             <span>Entradas</span>
             <img src="src/entradas.svg" alt="Icone referente a entradas." />
           </p>
-          <h3 id="entradas" class="sub-value">R$ 17.400,00</h3>
+          <h3 id="entradas" class="sub-value">R$ 0,00</h3>
         </section>
 
         <section class="saidas cards">
@@ -34,7 +46,7 @@
             <span>Saídas</span>
             <img src="src/saídas.svg" alt="Icone referente a saídas." />
           </p>
-          <h3 id="saidas" class="sub-value">R$ 1.259,00</h3>
+          <h3 id="saidas" class="sub-value">R$ 0,00</h3>
         </section>
 
         <section class="total cards">
@@ -42,7 +54,7 @@
             <span>Balanço</span>
             <img src="src/total.svg" alt="Icone referente a balanço." />
           </p>
-          <h3 id="total" class="sub-value">R$ 16.141,00</h3>
+          <h3 id="total" class="sub-value">R$ 0,00</h3>
         </section>
       </div>
 
@@ -125,7 +137,7 @@
         <div class="tela-conteudo">
           <div id="form">
             <h2 class="title">Nova transação</h2>
-            <form action="">
+            <form action="" onsubmit="formulario.submit(event)">
               <div class="input-group">
                 <label for="description"></label>
                 <input
@@ -140,6 +152,7 @@
                 <label for="amount"></label>
                 <input
                   type="number"
+                  step="0.01"
                   id="amount"
                   name="amount"
                   placeholder="0,00"
