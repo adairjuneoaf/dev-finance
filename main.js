@@ -70,6 +70,8 @@ const transacoes = {
     add(listaTransacoes){
         transacoes.all.push(listaTransacoes)
 
+        document.location.reload(true)
+
         app.reload()
     },
 
@@ -77,6 +79,8 @@ const transacoes = {
         transacoes.all.splice(index, 1)
 
         app.reload()
+
+        document.location.reload(true)
     },
 
     entradas(){
@@ -258,6 +262,15 @@ const formulario = {
     }
 }
 
+const dataTable = {
+    datatable(){
+        const table = new DataTable('#data-table', {
+            order: [2, 'asc'],
+            pageLength: 15
+        })
+    }
+}
+
 //CONSTANTE QUE DA INÍCIO E RECORRENCIA AS FUNCIONALIDADES
 const app = {
     init(){
@@ -273,8 +286,11 @@ const app = {
 
     reload() {
         modelagemHTML.limparTransacoes()
+
         app.init()
-    }
+    },
 }
 
 app.init()
+
+dataTable.datatable()
