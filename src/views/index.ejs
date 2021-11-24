@@ -7,7 +7,7 @@
 
     <link
       rel="shortcut icon"
-      href="src/logo-top-burguer.svg"
+      href="images/logo-top-burguer.png"
       type="image/x-icon"
       sizes="64x64"
     />
@@ -23,15 +23,15 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="DataTables-1.11.3/css/jquery.dataTables.css"
+      href="DataTables/DataTables-1.11.3/css/jquery.dataTables.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="SearchBuilder-1.3.0/css/searchBuilder.dataTables.css"
+      href="DataTables/SearchBuilder-1.3.0/css/searchBuilder.dataTables.css"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 
     <link
       rel="stylesheet"
@@ -46,7 +46,7 @@
       <!--<h1 class="title">Top Burguer<span>.</span>Finança<span>$</span></h1>-->
       <a href="/"
         ><img
-          src="src/logo-top-burguer.png"
+          src="images/logo-top-burguer.png"
           alt="Logo da lanchonete Top Burguer"
       /></a>
     </header>
@@ -56,7 +56,7 @@
         <section class="entradas cards">
           <p class="sub-title">
             <span>Entradas</span>
-            <img src="src/entradas.svg" alt="Icone referente a entradas." />
+            <img src="images/entradas.svg" alt="Icone referente a entradas." />
           </p>
           <h3 id="entradas" class="sub-value">R$ 0,00</h3>
         </section>
@@ -64,7 +64,7 @@
         <section class="saidas cards">
           <p class="sub-title">
             <span>Saídas</span>
-            <img src="src/saídas.svg" alt="Icone referente a saídas." />
+            <img src="images/saídas.svg" alt="Icone referente a saídas." />
           </p>
           <h3 id="saidas" class="sub-value">R$ 0,00</h3>
         </section>
@@ -72,7 +72,7 @@
         <section class="total cards">
           <p class="sub-title">
             <span>Balanço</span>
-            <img src="src/total.svg" alt="Icone referente a balanço." />
+            <img src="images/total.svg" alt="Icone referente a balanço." />
           </p>
           <h3 id="total" class="sub-value">R$ 0,00</h3>
         </section>
@@ -81,7 +81,7 @@
       <section class="transacoes">
         <button onclick="telaTransacao.open()" id="lancamento">
           <img
-            src="src/add.svg"
+            src="images/add.svg"
             alt="Icone referente a adição de transações"
           /><span>Nova Transação</span>
         </button>
@@ -226,6 +226,6 @@
       src="DataTables/SearchBuilder-1.3.0/js/dataTables.searchBuilder.js"
     ></script>
 
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

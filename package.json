@@ -1,10 +1,11 @@
 {
-  "name": "mission-discover---maratona-01",
+  "name": "Top Burguer Finance",
   "version": "1.0.0",
-  "description": "<img src=\"https://i.imgur.com/0rgk4ls.gif\" width=\"830\" height=\"512\" />",
-  "main": "main.js",
+  "description": "Plataforma para gerenciamento de finanças.",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "iniciarServer": "nodemon ."
   },
   "repository": {
     "type": "git",
