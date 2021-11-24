@@ -173,7 +173,7 @@ const modelagemHTML = {
         <td class="remover">
         <button onclick="transacoes.remove(${index})" title="Remover Transação" class="btn-remover">
             <img
-                src="src/remove.svg"
+                src="images/remove.svg"
                 alt="Icone para remover transação"
             />
         </button>
